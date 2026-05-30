@@ -6,7 +6,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -18,7 +17,7 @@ const Footer = () => {
               E-<span className="text-blue-400">Kata</span>
             </Link>
             <p className="text-sm leading-relaxed">
-              Votre boutique mode en ligne à Tananarive. Des vêtements et accessoires de qualité livrés directement chez vous.
+              Vente en ligne de vêtements et accessoires à Tananarive. Des produits de qualité livrés directement chez vous.
             </p>
           </div>
 
@@ -30,7 +29,7 @@ const Footer = () => {
                 <Link to="/" className="text-sm hover:text-blue-400 transition-colors">Accueil</Link>
               </li>
               <li>
-                <Link to="/shop" className="text-sm hover:text-blue-400 transition-colors">Boutique</Link>
+                <Link to="/shop" className="text-sm hover:text-blue-400 transition-colors">Produits</Link>
               </li>
               <li>
                 <Link to="/about" className="text-sm hover:text-blue-400 transition-colors">À propos</Link>
@@ -47,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span>+261374813725</span>
+                <span>+261 37 48 137 25</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
@@ -60,7 +59,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Opening Hours & Social */}
+          {/* Hours & Social */}
           <div>
             <h3 className="font-bold text-white mb-4">Horaires</h3>
             <ul className="space-y-2 text-sm">
@@ -78,10 +77,9 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Social Links */}
             <div className="flex gap-3 mt-4">
               <a
-                href="https://wa.me/261340000000"
+                href="https://wa.me/261374813725"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors"
@@ -103,15 +101,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-center md:text-left">
             © {currentYear} <span className="text-white font-semibold">E-Kata</span>. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="hover:text-blue-400 transition-colors">Conditions générales</a>
-            <a href="#" className="hover:text-blue-400 transition-colors">Politique de confidentialité</a>
+            <a href="#" className="hover:text-blue-400 transition-colors">Conditions de vente</a>
+            <a href="#" className="hover:text-blue-400 transition-colors">Confidentialité</a>
           </div>
         </div>
       </div>
