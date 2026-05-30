@@ -13,7 +13,7 @@ const About = () => {
           À propos d'<span className="text-blue-600">E-Kata</span>
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Votre boutique mode en ligne de confiance à Tananarive
+          Votre vente en ligne de vêtements et accessoires à Tananarive
         </p>
       </div>
 
@@ -24,7 +24,7 @@ const About = () => {
             Notre <span className="text-blue-600">Histoire</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-            E-Kata est né d'une passion pour la mode et le digital. Nous avons créé cette boutique 
+            E-Kata est né d'une passion pour la mode et le digital. Nous avons créé cette plateforme 
             pour offrir aux Tananariviens un accès facile à des vêtements et accessoires tendance, 
             sans avoir à se déplacer.
           </p>
@@ -142,13 +142,13 @@ const About = () => {
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-center text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Prêt à découvrir notre collection ?</h2>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Parcourez notre boutique et trouvez les pièces qui vous correspondent. Livraison rapide à Tananarive.
+          Parcourez nos produits et trouvez les pièces qui vous correspondent. Livraison rapide à Tananarive.
         </p>
         <Link
           to="/shop"
           className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors"
         >
-          Voir la boutique
+          Voir les produits
           <Sparkles className="w-5 h-5" />
         </Link>
       </div>
