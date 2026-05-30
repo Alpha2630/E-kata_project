@@ -9,7 +9,7 @@ interface MobileMoneyModalProps {
 
 const MobileMoneyModal = ({ total, onClose, onConfirm }: MobileMoneyModalProps) => {
   const [copied, setCopied] = useState(false);
-  const phoneNumber = "034 00 000 00"; // À remplacer par ton vrai numéro
+  const phoneNumber = "037 48 137 25"; // À remplacer par ton vrai numéro
   const formatPrice = (price: number) => price.toLocaleString() + " Ar";
 
   const handleCopy = (text: string) => {

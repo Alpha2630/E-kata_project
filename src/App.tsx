@@ -3,6 +3,7 @@ import { useState } from "react";
 import { CartProvider } from "./context/CartContext";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
@@ -23,6 +24,7 @@ function App() {
             </Routes>
           </main>
           <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+          <Footer />
         </div>
       </Router>
     </CartProvider>
