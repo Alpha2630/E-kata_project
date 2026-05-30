@@ -31,11 +31,11 @@ const slides = [
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto slide
+  // Auto slide - 7 secondes
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
@@ -58,7 +58,7 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ${
+            className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -67,20 +67,21 @@ const Home = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" />
+            {/* Overlay plus foncé pour meilleure lisibilité */}
+            <div className="absolute inset-0 bg-black/50" />
             
             {/* Text Content - Centered */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white px-4 max-w-3xl">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-2xl">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-lg font-light">
                   {slide.subtitle}
                 </p>
                 <Link
                   to={slide.link}
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg"
                 >
                   {slide.cta}
                   <ArrowRight className="w-5 h-5" />
@@ -93,13 +94,13 @@ const Home = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/40 rounded-full flex items-center justify-center transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/40 rounded-full flex items-center justify-center transition-colors"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all"
         >
           <ChevronRight className="w-6 h-6 text-white" />
         </button>
@@ -110,10 +111,10 @@ const Home = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              className={`h-3 rounded-full transition-all duration-500 ${
                 index === currentSlide
-                  ? "bg-white w-8"
-                  : "bg-white/50 hover:bg-white/80"
+                  ? "bg-white w-10"
+                  : "bg-white/40 hover:bg-white/70 w-3"
               }`}
             />
           ))}
