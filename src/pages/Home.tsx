@@ -157,16 +157,8 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent" />
                 </div>
               </div>
-              <div className="w-full md:w-3/5 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                    <Truck className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-                    Livraison
-                  </span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+              <div className="w-full md:w-3/5">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white text-center md:text-left">
                   Livraison Express à Tananarive
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
@@ -174,7 +166,7 @@ const Home = () => {
                   recevez vos articles en 24 à 48h dans tout Tananarive. On
                   s'occupe de tout.
                 </p>
-                <ul className="space-y-2 inline-block text-left">
+                <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                     <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0" />
                     Livraison suivie et sécurisée
@@ -203,16 +195,8 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-green-600/30 to-transparent" />
                 </div>
               </div>
-              <div className="w-full md:w-3/5 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-green-600" />
-                  </div>
-                  <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">
-                    Qualité
-                  </span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+              <div className="w-full md:w-3/5">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white text-center md:text-left">
                   Des produits sélectionnés avec soin
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
@@ -220,7 +204,7 @@ const Home = () => {
                   choisissons des matériaux durables pour vous garantir des
                   vêtements qui résistent au temps.
                 </p>
-                <ul className="space-y-2 inline-block text-left">
+                <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                     <div className="w-2 h-2 bg-green-600 rounded-full flex-shrink-0" />
                     Contrôle qualité systématique
@@ -249,23 +233,15 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-orange-600/30 to-transparent" />
                 </div>
               </div>
-              <div className="w-full md:w-3/5 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
-                    <CreditCard className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-orange-600 font-semibold text-sm uppercase tracking-wider">
-                    Paiement
-                  </span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+              <div className="w-full md:w-3/5">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white text-center md:text-left">
                   Payez facilement avec votre Mobile
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   Pas besoin de carte bancaire. Utilisez Orange Money, Airtel
                   Money ou MVola pour régler vos achats en quelques secondes.
                 </p>
-                <ul className="space-y-2 inline-block text-left">
+                <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                     <div className="w-2 h-2 bg-orange-600 rounded-full flex-shrink-0" />
                     Orange Money, Airtel Money, MVola
@@ -284,24 +260,31 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Products */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 dark:text-white">
-            Produits populaires
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-20">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold dark:text-white mb-4">
+              Produits <span className="text-blue-600">Populaires</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+              Les articles les plus commandés par nos clients
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {featuredProducts.slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="text-center mt-8">
+
+          <div className="text-center mt-12">
             <Link
               to="/shop"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:underline"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all hover:scale-105 shadow-lg"
             >
-              Voir tous les produits <ArrowRight className="w-5 h-5" />
+              Voir tous les produits
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
