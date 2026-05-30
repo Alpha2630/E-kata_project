@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
+import Contact from "./pages/Contact";
+
 import ProductDetail from "./pages/ProductDetail";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
           <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
