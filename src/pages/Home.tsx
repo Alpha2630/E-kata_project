@@ -2,30 +2,40 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { featuredProducts } from "../data/products";
 import ProductCard from "../components/ProductCard";
-import { ArrowRight, Truck, Shield, CreditCard, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  Truck,
+  Shield,
+  CreditCard,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200",
+    image:
+      "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200",
     title: "Ton style, ta signature",
     subtitle: "Des vêtements qui te ressemblent, sans bouger de chez toi",
     cta: "Découvrir la collection",
-    link: "/shop"
+    link: "/shop",
   },
   {
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200",
+    image:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200",
     title: "La mode livrée chez toi",
     subtitle: "Commande en ligne, on s'occupe du reste. Simple et rapide.",
     cta: "Commander maintenant",
-    link: "/shop"
+    link: "/shop",
   },
   {
-    image: "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?w=1200",
+    image:
+      "https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?w=1200",
     title: "Qualité & accessibilité",
     subtitle: "Des pièces tendances à prix justes, pour toutes les occasions",
     cta: "Voir les produits",
-    link: "/shop"
-  }
+    link: "/shop",
+  },
 ];
 
 const Home = () => {
@@ -69,7 +79,7 @@ const Home = () => {
             />
             {/* Overlay plus foncé pour meilleure lisibilité */}
             <div className="absolute inset-0 bg-black/50" />
-            
+
             {/* Text Content - Centered */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white px-4 max-w-3xl">
@@ -122,45 +132,189 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
-                <Truck className="w-8 h-8" />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold dark:text-white mb-4">
+              Pourquoi commander chez{" "}
+              <span className="text-blue-600">E-Kata</span> ?
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+              Une expérience de shopping en ligne pensée pour vous
+            </p>
+          </div>
+
+          <div className="space-y-20">
+            {/* Feature 1 - Image gauche */}
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/2">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+                  <img
+                    src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=600"
+                    alt="Livraison à Tananarive"
+                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-blue-600 font-bold text-sm">
+                      24-48h
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-bold text-lg mb-2 dark:text-white">Livraison à Tana</h3>
-              <p className="text-gray-600 dark:text-gray-400">Livraison rapide dans tout Tananarive</p>
+              <div className="w-full md:w-1/2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <Truck className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">
+                    Livraison
+                  </span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+                  Livraison Express à Tananarive
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg mb-4">
+                  Plus besoin de vous déplacer. Commandez depuis chez vous et
+                  recevez vos articles en 24 à 48h dans tout Tananarive. On
+                  s'occupe de tout.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full" />
+                    Livraison suivie et sécurisée
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full" />
+                    Emballage discret et soigné
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full" />
+                    Paiement à la livraison disponible
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
-                <Shield className="w-8 h-8" />
+
+            {/* Feature 2 - Image droite */}
+            <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/2">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+                  <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600"
+                    alt="Qualité des produits"
+                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-600/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-green-600 font-bold text-sm">
+                      Qualité Premium
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-bold text-lg mb-2 dark:text-white">Qualité garantie</h3>
-              <p className="text-gray-600 dark:text-gray-400">Produits sélectionnés avec soin</p>
+              <div className="w-full md:w-1/2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-green-600" />
+                  </div>
+                  <span className="text-green-600 font-medium text-sm uppercase tracking-wider">
+                    Qualité
+                  </span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+                  Des produits sélectionnés avec soin
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg mb-4">
+                  Chaque article est vérifié avant d'être expédié. Nous
+                  choisissons des matériaux durables pour vous garantir des
+                  vêtements qui résistent au temps.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-green-600 rounded-full" />
+                    Contrôle qualité systématique
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-green-600 rounded-full" />
+                    Matières premium sélectionnées
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-green-600 rounded-full" />
+                    Satisfait ou échangé sous 7 jours
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
-                <CreditCard className="w-8 h-8" />
+
+            {/* Feature 3 - Image gauche */}
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/2">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+                  <img
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"
+                    alt="Paiement Mobile Money"
+                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-600/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-orange-600 font-bold text-sm">
+                      Simple & Rapide
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-bold text-lg mb-2 dark:text-white">Mobile Money</h3>
-              <p className="text-gray-600 dark:text-gray-400">Paiement simple et sécurisé</p>
+              <div className="w-full md:w-1/2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
+                    <CreditCard className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <span className="text-orange-600 font-medium text-sm uppercase tracking-wider">
+                    Paiement
+                  </span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
+                  Payez facilement avec votre Mobile
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg mb-4">
+                  Pas besoin de carte bancaire. Utilisez Orange Money, Airtel
+                  Money ou MVola pour régler vos achats en quelques secondes.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-orange-600 rounded-full" />
+                    Orange Money, Airtel Money, MVola
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-orange-600 rounded-full" />
+                    Transaction sécurisée
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                    <div className="w-2 h-2 bg-orange-600 rounded-full" />
+                    Confirmation instantanée
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Featured Products */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 dark:text-white">Produits populaires</h2>
+          <h2 className="text-3xl font-bold mb-8 dark:text-white">
+            Produits populaires
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.slice(0, 4).map(product => (
+            {featuredProducts.slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/shop" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:underline">
+            <Link
+              to="/shop"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:underline"
+            >
               Voir tous les produits <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
