@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Truck, Shield, CreditCard, ArrowRight, Quote } from "lucide-react";
+import {
+  Sparkles,
+  Truck,
+  Shield,
+  CreditCard,
+  ArrowRight,
+  Quote,
+} from "lucide-react";
 
 const About = () => {
   return (
@@ -18,7 +25,9 @@ const About = () => {
                 <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-blue-400 font-semibold uppercase tracking-wider text-sm">Notre histoire</span>
+                <span className="text-blue-400 font-semibold uppercase tracking-wider text-sm">
+                  Notre histoire
+                </span>
               </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
                 À propos d'<span className="text-blue-400">E-Kata</span>
@@ -65,13 +74,15 @@ const About = () => {
                 Notre <span className="text-blue-600">Histoire</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                E-Kata est né d'une passion pour la mode et le digital. Nous avons créé cette plateforme 
-                pour offrir aux Tananariviens un accès facile à des vêtements et accessoires tendance, 
-                sans avoir à se déplacer.
+                E-Kata est né d'une passion pour la mode et le digital. Nous
+                avons créé cette plateforme pour offrir aux Tananariviens un
+                accès facile à des vêtements et accessoires tendance, sans avoir
+                à se déplacer.
               </p>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                Notre mission est simple : vous proposer des produits de qualité, à des prix abordables, 
-                avec une livraison rapide dans tout Tananarive.
+                Notre mission est simple : vous proposer des produits de
+                qualité, à des prix abordables, avec une livraison rapide dans
+                tout Tananarive.
               </p>
               <div className="flex items-center gap-2 text-blue-600 font-medium mt-6">
                 <Quote className="w-5 h-5" />
@@ -129,8 +140,12 @@ const About = () => {
                 <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <Truck className="w-5 h-5 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 dark:text-white">Livraison Express</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">24 à 48h dans tout Tananarive</p>
+                <h3 className="font-bold text-lg mb-2 dark:text-white">
+                  Livraison Express
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  24 à 48h dans tout Tananarive
+                </p>
               </div>
             </div>
 
@@ -144,8 +159,12 @@ const About = () => {
                 <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <Shield className="w-5 h-5 text-green-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 dark:text-white">Qualité Garantie</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">Produits vérifiés avec soin</p>
+                <h3 className="font-bold text-lg mb-2 dark:text-white">
+                  Qualité Garantie
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  Produits vérifiés avec soin
+                </p>
               </div>
             </div>
 
@@ -159,8 +178,12 @@ const About = () => {
                 <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <CreditCard className="w-5 h-5 text-orange-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 dark:text-white">Paiement Mobile</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">Orange, Airtel, MVola</p>
+                <h3 className="font-bold text-lg mb-2 dark:text-white">
+                  Paiement Mobile
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  Orange, Airtel, MVola
+                </p>
               </div>
             </div>
           </div>
@@ -170,21 +193,21 @@ const About = () => {
       {/* CTA avec image */}
       <section className="relative py-16 md:py-20 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200"
+          src="https://images.unsplash.com/photo-1483181957632-5c456cd4b09b?w=1200"
           alt="Shopping"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-indigo-700/90" />
+        <div className="absolute inset-0 bg-gray-900/80" />
         <div className="relative container mx-auto px-4 md:px-8 lg:px-16 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Prêt à découvrir notre collection ?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-gray-300 mb-8 max-w-xl mx-auto">
             Parcourez nos produits et trouvez les pièces qui vous correspondent.
           </p>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all hover:scale-105"
           >
             Voir les produits
             <ArrowRight className="w-5 h-5" />
