@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { CartProvider } from "./context/CartContext";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
+import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
 
 function App() {
-  const [, setIsCartOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <CartProvider>
@@ -21,6 +22,7 @@ function App() {
               <Route path="/product/:id" element={<ProductDetail />} />
             </Routes>
           </main>
+          <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
         </div>
       </Router>
     </CartProvider>
