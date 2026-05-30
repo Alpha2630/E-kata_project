@@ -4,9 +4,6 @@ import { featuredProducts } from "../data/products";
 import ProductCard from "../components/ProductCard";
 import {
   ArrowRight,
-  Truck,
-  Shield,
-  CreditCard,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
